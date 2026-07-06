@@ -1,0 +1,16 @@
+services:
+  ghost:
+    image: ghost:6.50.0-alpine3.23
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      url: https://divineslight.com/blog
+      NODE_ENV: production
+      database__client: mysql
+      database__connection__host: localhost
+      database__connection__user: ghost
+      database__connection__password: ghostMYSQL__user129380
+      database__connection__database: ghost_production
+    volumes:
+      - ./content:/var/lib/ghost/content
+      - ./content/config.production.json:/var/lib/ghost/config.production.json
