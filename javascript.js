@@ -1,8 +1,8 @@
 background = {
   canvas: null,
   context: null,
-  time_per_frame: 1000, // milliseconds
-  num_stars: 72, // num green beings
+  time_per_frame: 799, // milliseconds
+  num_stars: 99, // num green beings
 };
 
 var star_matrix = [];
